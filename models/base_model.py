@@ -38,3 +38,23 @@ class BaseModel:
                     self.updated_at = datetime.now()
                     storage.new(self)
 
+        def __str__(self):
+            """returns  string representation of an instance
+            in a readable format"""
+
+            return "[{}] ({}) {}".\
+                    format(type(self).__name__, self.id, self.__dict__)
+
+        def save(self):
+            """Updates the 'update_at' with the  current date and time"""
+
+            self.update_at = datetime.now()
+            storage.save()
+
+        def to_dict(self):
+            """returns a dictionary representation of an instance""""
+
+            my_dict = self.
+
+        
+
