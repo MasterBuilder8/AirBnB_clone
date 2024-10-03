@@ -48,7 +48,7 @@ class FileStorage():
         """deserializes the JSON file to __objects"""
         try:
             with open(FileStorage.__file_path, "r") as file:
-                obj = {'BaseModel': BaseModel, 'User':User, 'Place':Place,
+                obj = {'BaseModel': BaseModel, 'User':User, 'Location':Place,
                         'State':State, 'City':City, 'Amenity':Amenity,
                         'Review':Review}
                 data = json.load(file)
